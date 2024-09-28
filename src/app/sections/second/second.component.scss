@@ -1,0 +1,17 @@
+.second-section-container {
+    width: 100%;
+    top: 1000px;
+    position: relative;
+
+    .header {
+        // color: #E3E3E3;
+        color: #ffd599;
+        font-size: 3.5rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 200;
+        letter-spacing: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

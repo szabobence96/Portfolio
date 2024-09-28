@@ -1,0 +1,13 @@
+<div class="navbar-container"[ngClass]="{
+    'nav-closed': this.sharedService.closed,
+    'nav-opened': this.sharedService.opened
+}">
+    <div class="navbar">
+        <ul class="nav-data">
+            <li *ngFor="let data of navData">
+                {{data.label}}
+            </li>
+            <app-navbar-icon></app-navbar-icon>
+        </ul>
+    </div>
+</div>

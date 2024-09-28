@@ -1,0 +1,64 @@
+.first-section-container {
+    margin: 200px 0 0 30px;
+    position: absolute;
+    height: 500px;
+    transition: all 0.4s;
+
+    h2 {
+        color: #E3E3E3;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 200;
+        font-size: 1.5rem;
+        display: flex;
+        opacity: 0;
+        transition: all 0.4s;
+    }
+
+    .name {
+        margin: 0 0 0 10px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 6.5rem;
+        font-weight: 200;
+        opacity: 0;
+        letter-spacing: 10px;
+        line-height: normal;
+        text-transform: none;
+        color: #E3E3E3;
+        transition: all 0.4s;
+    }
+
+    .typewriter {
+        margin: 0 0 0 40px;
+
+        .text-animation {
+
+            font-family: 'Raleway', sans-serif;
+            position: absolute;
+            color: #ffd599;
+            font-weight: 900;
+            font-size: 3rem;
+            overflow: hidden;
+            border-right: .10em solid white;
+            /* The cursor */
+            white-space: nowrap;
+            margin: 0 auto;
+            /* Keep the content centered */
+            letter-spacing: .10em;
+            /* Adjust as needed */
+            animation: blink-caret .75s step-end infinite;
+        }
+    }
+
+    @keyframes blink-caret {
+
+        from,
+        to {
+            border-color: transparent
+        }
+
+        50% {
+            border-color: white;
+        }
+    }
+
+}
