@@ -1,0 +1,277 @@
+.carousel-container {
+    position: relative;
+    margin: auto;
+    width: auto;
+    max-width: 100%;
+
+    //box-shadow: 0 6px 12px #dce1e1;
+}
+
+.carousel-container img {
+    display: none;
+
+}
+
+.caption {
+    display: none;
+
+}
+
+.caption-active {
+    font-family: Outfit, sans-serif;
+    display: block;
+    position: absolute;
+    left: 2%;
+    top: 20%;
+    font-weight: 900;
+    font-size: clamp(35px, 4vw, 120px);
+    color: white;
+    line-height: 80px;
+    max-width: 500px;
+    text-shadow: 2px 2px 2px #333;
+}
+
+.caption-button {
+    display: none;
+}
+
+.caption-button-active {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+    font-weight: 900;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 15px 30px;
+    border: 1px solid white;
+    background: white;
+    color: black;
+    // transition: .2s ease;
+
+    &:hover {
+        background: transparent;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .caption-button-active {
+        font-size: 16px;
+        padding: 7px 13px;
+        bottom: 25%;
+    }
+
+    .caption-active {
+        max-width: 230px;
+        line-height: 38px;
+    }
+}
+
+.carousel-container img.image-active {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625rem;
+    // transition: all 0.5s ease;
+
+}
+
+.carousel-dot-container {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    // transition: opacitiy 0.6s ease;
+    opacity: 0.5;
+
+}
+
+.active,
+.dot:hover {
+    opacity: 1;
+}
+
+.fade {
+    // animation-name: fade;
+    // animation-duration: 0.7s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.8;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-carousel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    cursor: pointer;
+}
+
+.icon-carousel {
+    opacity: 0.5;
+    transition: all 0.15s ease;
+}
+
+.icon-carousel:hover {
+    color: #fff;
+    opacity: 0.9;
+}
+
+.icon-carousel:active {
+    opacity: 0.5;
+}
+
+.icon-prev,
+.icon-next {
+    font-size: 35px;
+}
+
+.btn-prev {
+    left: 0;
+}
+
+.btn-next {
+    right: 0;
+}
+
+@media screen and (max-width: 1080px) {
+    .carousel-container img.image-active {
+        border-radius: 0rem;
+        transition: all 0.5s ease;
+    }
+}
+
+// .overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0);
+//     color: white;
+//     display: flex;
+//     justify-content: left;
+//     align-items: end;
+//     opacity: 1;
+//     transition: all .5s;
+
+//     &:hover {
+//         background-color: rgba(0, 0, 0, 0.6);
+//     }
+
+//     .overlay-text {
+//         padding: 15px;
+//         font-size: 20px;
+//         text-align: left;
+//         background-color: rgb(85, 0, 0);
+//         width: 100%;
+//         height: 20%;
+
+//     }
+
+//     .overlay-text-button {
+//         margin-top: 50px;
+//         cursor: pointer;
+//     }
+// }
+
+$color-primary-white: rgb(240, 240, 240);
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    width: 24rem;
+    height: 36rem;
+    // border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: $color-primary-white;
+
+
+
+    h2 {
+        position: absolute;
+        inset: auto auto 30px 30px;
+        margin: 0;
+        transition: inset .3s .3s ease-out;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+
+    p,
+    a {
+        position: absolute;
+        opacity: 0;
+        max-width: 80%;
+        transition: opacity .3s ease-out;
+    }
+
+    p {
+        inset: auto auto 80px 30px;
+    }
+
+    a {
+        inset: auto auto 40px 30px;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &:hover h2 {
+        inset: auto auto 220px 30px;
+        transition: inset .3s ease-out;
+    }
+
+    &:hover p,
+    &:hover a {
+        opacity: 1;
+        transition: opacity .5s .1s ease-in;
+    }
+
+    &:hover img {
+        transition: opacity .3s ease-in;
+        opacity: 1;
+    }
+
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+}

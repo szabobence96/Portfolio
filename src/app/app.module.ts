@@ -9,6 +9,7 @@ import { FirstComponent } from './sections/first/first.component';
 import { NavbarIconComponent } from './customs/navbar-icon/navbar-icon.component';
 import { SecondComponent } from './sections/second/second.component';
 import { MainComponent } from './sections/main/main.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MainComponent } from './sections/main/main.component';
     FirstComponent,
     NavbarIconComponent,
     SecondComponent,
-    MainComponent
+    MainComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

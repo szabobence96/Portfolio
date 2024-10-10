@@ -1,3 +1,8 @@
 <div class="second-section-container">
     <div class="header">{{this.textservice.header}}</div>
+    <div class="name">Webshop</div>
+    <div class="img-container">
+        <app-carousel [carouselButton]="this.textservice.button" [carouselText]="this.textservice.text"
+            [images]="currentImages" [autoSlide]="true"></app-carousel>
+    </div>
 </div>

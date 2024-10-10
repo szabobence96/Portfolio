@@ -1,0 +1,16 @@
+<div *ngIf="images && images.length > 0" class="carousel-container" (mouseenter)="isVisible = true"
+    (mouseleave)="isVisible = false">
+    <img *ngFor="let image of images; let i = index" [src]="image.imageSrc" [alt]="image.imageAlt"
+        [ngClass]="{'image-active': selectedIndex === i}" class="fade">
+    <div class="overlay" [ngStyle]="{'opacity': isVisible ? '1' : '0.5'}">
+        <!-- <div class="overlay-text" *ngIf="isVisible">{{carouselText}}
+            <div class="overlay-text-button" *ngIf="isVisible">{{carouselButton}}</div>
+        </div> -->
+    </div>
+    <div *ngIf="controls" class="btn-carousel btn-prev">
+        <i class="fas fa-arrow-circle-left icon-carousel icon-prev" (click)="onPrevClick()"></i>
+    </div>
+    <div *ngIf="controls" class="btn-carousel btn-next">
+        <i class="fas fa-arrow-circle-right icon-carousel icon-next" (click)="onNextClick()"></i>
+    </div>
+</div>
