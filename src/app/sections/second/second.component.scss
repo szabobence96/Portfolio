@@ -1,7 +1,6 @@
 .second-section-container {
     width: 100%;
-    top: 1000px;
-    position: relative;
+    height: 100%;
 
     .header {
         // color: #E3E3E3;
@@ -42,6 +41,55 @@
         app-carousel {
             max-width: 1300px;
             margin: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .second-section-container {
+        width: 100%;
+        top: 0px;
+        position: relative;
+
+        .header {
+            // color: #E3E3E3;
+            color: #ffd599;
+            font-size: 1.5rem;
+            font-weight: 200;
+            letter-spacing: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-container {
+            position: relative;
+            margin-top: 100px;
+            height: auto;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: brightness(80%);
+
+            .name {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                color: blue;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            app-carousel {
+                max-width: 1300px;
+                margin: 10px;
+            }
         }
     }
 }
