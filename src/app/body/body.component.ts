@@ -22,21 +22,21 @@ export class BodyComponent implements OnInit {
         imageCity.classList.add('fade-in');
       }
     }, 200);
-    this.setCurrentImage();  // Képméret frissítése ablakméret változáskor
+    this.setCurrentImage();
 
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.screenwidth = window.innerWidth;
-    this.setCurrentImage();  // Képméret frissítése ablakméret változáskor
+    this.setCurrentImage();
 
   }
   setCurrentImage() {
     if (this.screenwidth < 768) {
-      this.currentImg = this.bgMobile;  // Mobil nézet
+      this.currentImg = this.bgMobile;
     } else {
-      this.currentImg = this.bgPc;      // Asztali nézet
+      this.currentImg = this.bgPc;
     }
   }
 }
